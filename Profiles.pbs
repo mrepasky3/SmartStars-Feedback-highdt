@@ -1,0 +1,13 @@
+#PBS -N SmartStars-Feedback-highdt_Profiles
+#PBS -l nodes=2:ppn=4
+#PBS -l pmem=2gb
+#PBS -l walltime=2:00:00
+#PBS -q hive
+#PBS -j oe
+#PBS -o Profiles.out
+#PBS -m abe
+#PBS -M mwrepasky@gatech.edu
+
+cd $PBS_O_WORKDIR
+export PATH=/storage/home/hhive1/mrepasky3/yt-conda/bin:$PATH
+python Feedback_Profiles.py

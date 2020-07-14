@@ -1,0 +1,14 @@
+#PBS -N SmartStars-Feedback-highdt_Inspect
+#PBS -l nodes=2:ppn=4
+#PBS -l pmem=2gb
+#PBS -l walltime=12:00:00
+#PBS -q hive
+#PBS -j oe
+#PBS -o Inspect.out
+#PBS -m abe
+#PBS -M mwrepasky@gatech.edu
+
+cd $PBS_O_WORKDIR
+export PATH=/storage/home/hhive1/mrepasky3/yt-conda/bin:$PATH
+python Inspect.py
+#python vel-diff.py
